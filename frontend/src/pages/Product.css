@@ -1,0 +1,21 @@
+
+  /* Product.css */
+.product-list {
+
+
+    display: flex;
+    gap: 30px; /* Increased gap between products */
+  }
+  
+  .product-item {
+    text-align: center;
+    /* You can add additional styles here */
+  }
+  
+  .product-image {
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
