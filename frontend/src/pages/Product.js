@@ -1,12 +1,12 @@
 import React from 'react';
 import './Home.css'; // Import styles
 
-const Product = ({ products }) => {
-  // If products array is empty or not provided, render nothing
-  if (!products || products.length === 0) {
-    return null;
-  }
 
+
+
+const Product = ({ products, onAddToLoadout }) => {
+  
+  
   return (
     <div className="productDisplay">
       {products.map((product, i) => (
@@ -18,7 +18,11 @@ const Product = ({ products }) => {
           />
           <p>{product.name}</p>
           {/* Virtual Try On button */}
-          <button className="virtualTryOnButton">Virtual Try On</button>
+          <button 
+            className="virtualTryOnButton" 
+            onClick={() => onAddToLoadout(product.imageUrl)}>
+            Add to loadout
+          </button>
         </div>
       ))}
     </div>
@@ -26,4 +30,3 @@ const Product = ({ products }) => {
 };
 
 export default Product;
-
